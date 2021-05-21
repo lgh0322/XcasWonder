@@ -14,10 +14,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Example of a call to a native method
-        binding.sampleText.text = stringFromJNI()
+        binding.sampleText.text = stringFromJNI("1+integrate(x*sin(x),x)")
     }
 
-    external fun stringFromJNI(): String
+    external fun stringFromJNI(operation:String): String
 
     companion object {
         // Used to load the 'native-lib' library on application startup.
